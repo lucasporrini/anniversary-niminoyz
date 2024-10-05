@@ -27,7 +27,9 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
       {timeLeft.days > 0 && <div>{timeLeft.days} jours</div>}
       {timeLeft.hours > 0 && <div>{timeLeft.hours} heures</div>}
       {timeLeft.minutes > 0 && <div>{timeLeft.minutes} minutes</div>}
-      {timeLeft.seconds > 0 && <div>{timeLeft.seconds} secondes</div>}
+      <div>
+        {timeLeft.seconds} {timeLeft.seconds > 0 ? "secondes" : "seconde"}
+      </div>
     </div>
   );
 };

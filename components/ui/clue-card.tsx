@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import CountdownTimer from "../countdown";
 import ClueDescription from "../description";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./card";
+import { RainbowButton } from "./rainbow-button";
 
 const ClueCard = ({ title, description, clue, releaseDate }: Clue) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
@@ -32,7 +33,7 @@ const ClueCard = ({ title, description, clue, releaseDate }: Clue) => {
         <CardTitle>{title}</CardTitle>
       </CardHeader>
 
-      <CardContent>
+      <CardContent className="h-32">
         {timeLeft?.days === 0 &&
         timeLeft.hours === 0 &&
         timeLeft.minutes === 0 &&
@@ -43,7 +44,11 @@ const ClueCard = ({ title, description, clue, releaseDate }: Clue) => {
         )}
       </CardContent>
 
-      <CardFooter></CardFooter>
+      <CardFooter className="justify-center">
+        <RainbowButton disabled={haveAllValuesToZero(timeLeft)}>
+          Découvrir l'indice
+        </RainbowButton>
+      </CardFooter>
     </Card>
   );
 };
