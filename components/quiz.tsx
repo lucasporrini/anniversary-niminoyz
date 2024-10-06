@@ -43,7 +43,14 @@ const Quiz = () => {
         setCurrentQuestion(parseInt(savedProgress, 10));
       }
     }
-  }, [localStorage]);
+  }, [
+    form.setValue,
+    form.reset,
+    form.getValues,
+    form.setValue,
+    form.clearErrors,
+    form,
+  ]);
 
   const handleSubmit = (data: { answer: string }) => {
     const correctAnswer = questions[currentQuestion].answer.toLowerCase();

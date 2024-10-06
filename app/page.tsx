@@ -7,11 +7,10 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [quizCompleted, setQuizCompleted] = useState(false);
+
   useEffect(() => {
-    const storedQuizCompleted =
-      window.localStorage.getItem("quizCompleted") === "true";
-    console.log(storedQuizCompleted);
-    setQuizCompleted(storedQuizCompleted);
+    const storedQuizCompleted = localStorage.getItem("quizCompleted");
+    if (storedQuizCompleted) setQuizCompleted(true);
   }, []);
 
   const datas = data as Clue[];
