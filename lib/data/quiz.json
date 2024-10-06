@@ -1,0 +1,17 @@
+[
+  {
+    "question": "Quel est ton surnom ?",
+    "answer": "Minimoyz",
+    "indice": "Tu n'es pas très grande (mais je t'aime quand même)"
+  },
+  {
+    "question": "Quelle est ta date d'anniversaire ?",
+    "answer": "3002 erbotco 6",
+    "indice": "Que verrais-tu si tu regardais un miroir ?"
+  },
+  {
+    "question": "Combien donne ton âge + le nombre de lettres de ton prénom ?",
+    "answer": "25",
+    "indice": "Je ne peux plus rien faire si tu n'as pas réussi à trouver"
+  }
+]

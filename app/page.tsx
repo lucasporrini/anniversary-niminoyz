@@ -1,15 +1,18 @@
 "use client";
-import CountdownTimer from "@/components/countdown";
+import Quiz from "@/components/quiz";
 import ClueCard from "@/components/ui/clue-card";
-import { RainbowButton } from "@/components/ui/rainbow-button";
 import data from "@/lib/data/clues.json";
+import { useState } from "react";
 
 export default function Home() {
+  const [quizCompleted, setQuizCompleted] = useState(
+    localStorage.getItem("quizCompleted") === "true"
+  );
+
   return (
-    <div>
-      <CountdownTimer targetDate="2024-12-31T00:00:00Z" />
-      <RainbowButton>Click me</RainbowButton>
-      <div className="container mx-auto grid grid-cols-3 gap-10">
+    <div className="relative">
+      {!quizCompleted && <Quiz onComplete={() => setQuizCompleted(true)} />}
+      <div className="container mx-auto grid grid-cols-1 gap-4">
         {data.map((clue, index) => (
           <ClueCard key={index} {...clue} />
         ))}

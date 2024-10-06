@@ -11,7 +11,13 @@ export type Clue = {
   clue: {
     title: string;
     description: string;
-    location: string;
-  }[];
+    type: string;
+  };
   releaseDate: string;
+};
+
+export type Question = {
+  question: string;
+  answer: string;
+  indice: string;
 };

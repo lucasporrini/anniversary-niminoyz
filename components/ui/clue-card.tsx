@@ -18,9 +18,6 @@ const ClueCard = ({ title, description, clue, releaseDate }: Clue) => {
     return () => clearInterval(timer);
   }, [releaseDate]);
 
-  // console.log("timeLeft: ", timeLeft);
-  // console.log("haveAllValuesToZero: ", haveAllValuesToZero(timeLeft));
-
   return (
     <Card
       className={`min-w-48 border ${
