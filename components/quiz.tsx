@@ -11,7 +11,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
 import { Button } from "./ui/button";
 
 const Quiz = () => {
@@ -79,51 +78,49 @@ const Quiz = () => {
   if (completed) return null;
 
   return (
-    <BackgroundBeamsWithCollision>
-      <div className="flex flex-col items-center justify-center space-y-8 w-full">
-        <p className="text-xl font-bold w-[calc(100%-2rem)] max-w-md">
-          {questions[currentQuestion].question}
+    <div className="fixed top-0 left-0 h-screen w-screen z-50 bg-white flex flex-col items-center justify-center space-y-8">
+      <p className="text-xl font-bold w-[calc(100%-2rem)] max-w-md">
+        {questions[currentQuestion].question}
+      </p>
+
+      {showIndice && (
+        <p className="text-md text-gray-500">
+          Indice: {questions[currentQuestion].indice}
         </p>
+      )}
 
-        {showIndice && (
-          <p className="text-md text-gray-500">
-            Indice: {questions[currentQuestion].indice}
-          </p>
-        )}
-
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(handleSubmit)}
-            className="space-y-8 w-[calc(100%-2rem)] max-w-md"
-          >
-            <FormField
-              control={form.control}
-              name="answer"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      className="w-full"
-                      placeholder="Ici tu dois mettre ta réponse si tu n'avais pas compris 🤪"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                  {showError && (
-                    <span className="text-sm font-medium text-destructive">
-                      Mauvaise réponse, réessaye !
-                    </span>
-                  )}
-                </FormItem>
-              )}
-            />
-            <Button type="submit" className="w-full mt-auto">
-              Valider ma réponse
-            </Button>
-          </form>
-        </Form>
-      </div>
-    </BackgroundBeamsWithCollision>
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(handleSubmit)}
+          className="space-y-8 w-[calc(100%-2rem)] max-w-md"
+        >
+          <FormField
+            control={form.control}
+            name="answer"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    className="w-full"
+                    placeholder="Ici tu dois mettre ta réponse si tu n'avais pas compris 🤪"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+                {showError && (
+                  <span className="text-sm font-medium text-destructive">
+                    Mauvaise réponse, réessaye !
+                  </span>
+                )}
+              </FormItem>
+            )}
+          />
+          <Button type="submit" className="w-full mt-auto">
+            Valider ma réponse
+          </Button>
+        </form>
+      </Form>
+    </div>
   );
 };
 

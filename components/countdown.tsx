@@ -1,6 +1,7 @@
 "use client";
 import { TimeLeft } from "@/lib/types";
 import { calculateTimeLeft } from "@/lib/utils";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface CountdownTimerProps {
@@ -24,11 +25,17 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      {timeLeft.days > 0 && <div>{timeLeft.days} jours</div>}
-      {timeLeft.hours > 0 && <div>{timeLeft.hours} heures</div>}
-      {timeLeft.minutes > 0 && <div>{timeLeft.minutes} minutes</div>}
-      <div>
-        {timeLeft.seconds} {timeLeft.seconds > 0 ? "secondes" : "seconde"}
+      <Image src="/cat.png" width={200} height={200} alt="cat" />
+      {timeLeft.days > 1 && <span>En quelques jours</span>}
+      {timeLeft.days === 1 && <span>Plus qu&apos;un jour</span>}
+      {timeLeft.hours > 0 && <span>{timeLeft.hours} heures</span>}
+      <div className="text-lg font-bold">
+        {timeLeft.minutes > 0 && <span>{timeLeft.minutes}:</span>}
+        <span>
+          {timeLeft.seconds < 10 && timeLeft.seconds >= 0
+            ? `0${timeLeft.seconds}`
+            : timeLeft.seconds}
+        </span>
       </div>
     </div>
   );

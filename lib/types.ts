@@ -7,11 +7,10 @@ export type TimeLeft = {
 
 export type Clue = {
   title: string;
-  description: string;
   clue: {
     title: string;
     description: string;
-    type: string;
+    type: "url" | "text" | "image";
   };
   releaseDate: string;
 };

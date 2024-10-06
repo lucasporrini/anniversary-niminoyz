@@ -2,16 +2,19 @@
 import Quiz from "@/components/quiz";
 import ClueCard from "@/components/ui/clue-card";
 import data from "@/lib/data/clues.json";
+import { Clue } from "@/lib/types";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [quizCompleted, setQuizCompleted] = useState(false);
-
   useEffect(() => {
     const storedQuizCompleted =
-      localStorage.getItem("quizCompleted") === "true";
+      window.localStorage.getItem("quizCompleted") === "true";
+    console.log(storedQuizCompleted);
     setQuizCompleted(storedQuizCompleted);
   }, []);
+
+  const datas = data as Clue[];
 
   return (
     <div className="relative">
@@ -37,7 +40,7 @@ export default function Home() {
         </p>
       </div>
       <div className="container mx-auto grid grid-cols-2 gap-4 p-4">
-        {data.map((clue, index) => (
+        {datas.map((clue, index) => (
           <ClueCard key={index} {...clue} />
         ))}
       </div>

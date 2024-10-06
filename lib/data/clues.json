@@ -1,41 +1,37 @@
 [
   {
     "title": "Clues",
-    "description": "A list of clues for the treasure hunt.",
     "clue": {
       "title": "Clue 1",
       "description": "The first clue is hidden in the library.",
-      "type": "Library"
+      "type": "text"
     },
     "releaseDate": "2024-05-10T22:30:00"
   },
   {
     "title": "Clues",
-    "description": "A list of clues for the treasure hunt.",
     "clue": {
       "title": "Clue 1",
       "description": "The first clue is hidden in the library.",
-      "type": "Library"
+      "type": "text"
     },
     "releaseDate": "2024-10-06T01:07:00"
   },
   {
     "title": "Clues",
-    "description": "A list of clues for the treasure hunt.",
     "clue": {
       "title": "Clue 2",
       "description": "The second clue is hidden in the garden.",
-      "type": "Garden"
+      "type": "text"
     },
     "releaseDate": "2024-10-07T01:07:00"
   },
   {
     "title": "Clues",
-    "description": "A list of clues for the treasure hunt.",
     "clue": {
       "title": "Clue 2",
       "description": "The second clue is hidden in the garden.",
-      "type": "Garden"
+      "type": "text"
     },
     "releaseDate": "2024-10-06T01:10:00"
   }
