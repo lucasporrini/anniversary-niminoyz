@@ -52,7 +52,7 @@ const ClueCard = ({ title, description, clue, releaseDate }: Clue) => {
         <Popover>
           <PopoverTrigger asChild>
             <RainbowButton disabled={haveAllValuesToZero(timeLeft)}>
-              Découvrir l'indice
+              Découvrir l&apos;indice
             </RainbowButton>
           </PopoverTrigger>
           <PopoverContent className="w-80">
