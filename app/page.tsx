@@ -13,7 +13,7 @@ export default function Home() {
     if (storedQuizCompleted) setQuizCompleted(true);
   }, []);
 
-  const datas = data as Clue[];
+  const clues = data as Clue[];
 
   return (
     <div className="relative">
@@ -39,7 +39,7 @@ export default function Home() {
         </p>
       </div>
       <div className="container mx-auto grid grid-cols-2 gap-4 p-4">
-        {datas.map((clue, index) => (
+        {clues.map((clue, index) => (
           <ClueCard key={index} {...clue} />
         ))}
       </div>

@@ -1,38 +1,26 @@
 [
   {
-    "title": "Clues",
-    "clue": {
-      "title": "Clue 1",
-      "description": "The first clue is hidden in the library.",
-      "type": "text"
-    },
+    "title": "Clue 1",
+    "description": "The first clue is hidden in the library.",
+    "type": "text",
     "releaseDate": "2024-05-10T22:30:00"
   },
   {
-    "title": "Clues",
-    "clue": {
-      "title": "Clue 1",
-      "description": "The first clue is hidden in the library.",
-      "type": "text"
-    },
+    "title": "Clue 2",
+    "description": "The first clue is hidden in the library.",
+    "type": "text",
     "releaseDate": "2024-10-06T01:07:00"
   },
   {
-    "title": "Clues",
-    "clue": {
-      "title": "Clue 2",
-      "description": "The second clue is hidden in the garden.",
-      "type": "text"
-    },
-    "releaseDate": "2024-10-07T01:07:00"
+    "title": "Clue 3",
+    "description": "The second clue is hidden in the garden.",
+    "type": "text",
+    "releaseDate": "2024-10-07T01:00:00"
   },
   {
-    "title": "Clues",
-    "clue": {
-      "title": "Clue 2",
-      "description": "The second clue is hidden in the garden.",
-      "type": "text"
-    },
+    "title": "Clue 4",
+    "description": "The second clue is hidden in the garden.",
+    "type": "text",
     "releaseDate": "2024-10-06T01:10:00"
   }
 ]

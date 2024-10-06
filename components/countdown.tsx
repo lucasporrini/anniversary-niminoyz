@@ -30,7 +30,11 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
       {timeLeft.days === 1 && <span>Plus qu&apos;un jour</span>}
       {timeLeft.hours > 0 && <span>{timeLeft.hours} heures</span>}
       <div className="text-lg font-bold">
-        {timeLeft.minutes > 0 && <span>{timeLeft.minutes}:</span>}
+        {timeLeft.minutes > 0 ? (
+          <span>{timeLeft.minutes}:</span>
+        ) : (
+          <span>00:</span>
+        )}
         <span>
           {timeLeft.seconds < 10 && timeLeft.seconds >= 0
             ? `0${timeLeft.seconds}`
