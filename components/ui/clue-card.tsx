@@ -23,6 +23,8 @@ const ClueCard = ({ title, description, clue, releaseDate }: Clue) => {
     return () => clearInterval(timer);
   }, [releaseDate]);
 
+  console.log(clue);
+
   return (
     <Card
       className={`min-w-48 border ${
