@@ -27,15 +27,15 @@ export default function Home() {
         <p>
           Désormais, tu vas devoir attendre chaques comptes à rebours pour
           découvrir (ou pas) la <strong>destination secrète</strong> de notre
-          week-end
+          week-end.
         </p>
         <p>
           Prends des notes, réfléchis, prends ton temps et surtout ne cède pas à
-          la panique parce que dans tous les cas le voyage n&poas;aura lieu que
+          la panique parce que dans tous les cas le voyage n&apos;aura lieu que
           le
           <strong> samedi 7 octobre à 7h00</strong>. Une fois le periple entamé,
           tu pourras et seulement le moment venu, découvrir{" "}
-          <strong>l&apos;ultime indice</strong>
+          <strong>l&apos;ultime indice</strong>.
         </p>
       </div>
       <div className="container mx-auto grid grid-cols-2 gap-4 p-4">
