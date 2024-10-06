@@ -75,9 +75,9 @@ export const BackgroundBeamsWithCollision = ({
         className
       )}
     >
-      {beams.map((beam) => (
+      {beams.map((beam, index) => (
         <CollisionMechanism
-          key={beam.initialX + "beam-idx"}
+          key={`beam-${index}`}
           beamOptions={beam}
           containerRef={containerRef}
           parentRef={parentRef}
@@ -114,7 +114,7 @@ const CollisionMechanism = React.forwardRef<
       repeatDelay?: number;
     };
   }
->(({ parentRef, containerRef, beamOptions = {} }) => {
+>(({ parentRef, containerRef, beamOptions = {} }, ref) => {
   const beamRef = useRef<HTMLDivElement>(null);
   const [collision, setCollision] = useState<{
     detected: boolean;
@@ -250,8 +250,12 @@ const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
             y: span.directionY,
             opacity: 0,
           }}
-          transition={{ duration: Math.random() * 1.5 + 0.5, ease: "easeOut" }}
-          className="absolute h-1 w-1 rounded-full bg-gradient-to-b from-indigo-500 to-purple-500"
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.3,
+          }}
+          className="absolute top-0 left-0 m-auto h-2 w-1 rounded-full bg-indigo-500"
         />
       ))}
     </div>
