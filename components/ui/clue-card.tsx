@@ -19,11 +19,15 @@ const ClueCard = ({ title, description, type, releaseDate }: Clue) => {
 
   return (
     <Card
-      className={`min-w-48 border ${
-        timeLeft && timeLeft.hours < 1 && haveAllValuesToZero(timeLeft, "hours")
+      className={`min-w-48 h-60 border ${
+        timeLeft &&
+        timeLeft.days < 1 &&
+        timeLeft.hours < 1 &&
+        haveAllValuesToZero(timeLeft, "hours")
           ? "border-red-500 animate-pulse"
           : ""
-      }`}
+      }
+      `}
     >
       {timeLeft?.days === 0 &&
         timeLeft.hours === 0 &&
