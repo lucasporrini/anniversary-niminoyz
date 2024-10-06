@@ -8,11 +8,9 @@ export default function Home() {
   const [quizCompleted, setQuizCompleted] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedQuizCompleted =
-        window.localStorage.getItem("quizCompleted") === "true";
-      setQuizCompleted(storedQuizCompleted);
-    }
+    const storedQuizCompleted =
+      localStorage.getItem("quizCompleted") === "true";
+    setQuizCompleted(storedQuizCompleted);
   }, []);
 
   return (
