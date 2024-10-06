@@ -11,8 +11,8 @@ export default function Home() {
 
   return (
     <div className="relative">
-      {!quizCompleted && <Quiz onComplete={() => setQuizCompleted(true)} />}
-      <div className="container mx-auto grid grid-cols-1 gap-4">
+      {!quizCompleted && <Quiz />}
+      <div className="container mx-auto grid grid-cols-1 gap-4 p-4">
         {data.map((clue, index) => (
           <ClueCard key={index} {...clue} />
         ))}

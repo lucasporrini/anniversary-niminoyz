@@ -14,7 +14,7 @@ import { z } from "zod";
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
 import { Button } from "./ui/button";
 
-const Quiz = ({ onComplete }: { onComplete: () => void }) => {
+const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [completed, setCompleted] = useState(false);
   const [attempts, setAttempts] = useState(0);
@@ -38,14 +38,13 @@ const Quiz = ({ onComplete }: { onComplete: () => void }) => {
     const saved = localStorage.getItem("quizCompleted");
     if (saved) {
       setCompleted(true);
-      onComplete();
     } else {
       const savedProgress = localStorage.getItem("quizProgress");
       if (savedProgress) {
         setCurrentQuestion(parseInt(savedProgress, 10));
       }
     }
-  }, [onComplete]);
+  }, [localStorage]);
 
   const handleSubmit = (data: { answer: string }) => {
     const correctAnswer = questions[currentQuestion].answer.toLowerCase();
@@ -59,7 +58,6 @@ const Quiz = ({ onComplete }: { onComplete: () => void }) => {
         // Toutes les questions ont été répondues
         localStorage.setItem("quizCompleted", "true");
         setCompleted(true);
-        onComplete();
       } else {
         // Passer à la question suivante et sauvegarder la progression
         const nextQuestion = currentQuestion + 1;
