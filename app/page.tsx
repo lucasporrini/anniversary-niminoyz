@@ -2,12 +2,16 @@
 import Quiz from "@/components/quiz";
 import ClueCard from "@/components/ui/clue-card";
 import data from "@/lib/data/clues.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [quizCompleted] = useState(
-    window.localStorage.getItem("quizCompleted") === "true"
-  );
+  const [quizCompleted, setQuizCompleted] = useState(false);
+
+  useEffect(() => {
+    const storedQuizCompleted =
+      window.localStorage.getItem("quizCompleted") === "true";
+    setQuizCompleted(storedQuizCompleted);
+  }, []);
 
   return (
     <div className="relative">
