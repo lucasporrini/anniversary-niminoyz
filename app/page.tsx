@@ -5,7 +5,7 @@ import data from "@/lib/data/clues.json";
 import { useState } from "react";
 
 export default function Home() {
-  const [quizCompleted, setQuizCompleted] = useState(
+  const [quizCompleted] = useState(
     localStorage.getItem("quizCompleted") === "true"
   );
 
