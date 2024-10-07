@@ -38,15 +38,12 @@ const ClueCard = ({ title, description, type, releaseDate }: Clue) => {
           </CardHeader>
         )}
 
-      <CardContent className="flex items-center justify-center">
+      <CardContent className="flex items-center justify-center text-center">
         {timeLeft?.days === 0 &&
         timeLeft.hours === 0 &&
         timeLeft.minutes === 0 &&
         timeLeft.seconds === 0 ? (
-          <div>
-            <ClueDescription text={description} />
-            <ClueDescription text={type} />
-          </div>
+          <ClueDescription description={description} type={type} />
         ) : (
           <CountdownTimer targetDate={releaseDate} />
         )}

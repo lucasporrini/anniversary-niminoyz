@@ -1,26 +1,86 @@
 [
   {
-    "title": "Clue 1",
-    "description": "The first clue is hidden in the library.",
+    "title": "Indice 1",
+    "description": "Odense, Danemark",
     "type": "text",
-    "releaseDate": "2024-05-10T22:30:00"
+    "releaseDate": "2024-10-06T20:00:00"
   },
   {
-    "title": "Clue 2",
-    "description": "The first clue is hidden in the library.",
+    "title": "Indice 2",
+    "description": "48.948518, 0.027122",
     "type": "text",
-    "releaseDate": "2024-10-06T01:07:00"
+    "releaseDate": "2024-10-07T20:00:00"
   },
   {
-    "title": "Clue 3",
-    "description": "The second clue is hidden in the garden.",
+    "title": "Indice 3",
+    "description": "Paris, France",
     "type": "text",
-    "releaseDate": "2024-10-07T01:00:00"
+    "releaseDate": "2024-10-08T20:00:00"
   },
   {
-    "title": "Clue 4",
-    "description": "The second clue is hidden in the garden.",
+    "title": "Indice 4",
+    "description": "La symétrie peut être axiale, centrale ou orthogonale.",
     "type": "text",
-    "releaseDate": "2024-10-08T01:20:00"
+    "releaseDate": "2024-10-09T20:00:00"
+  },
+  {
+    "title": "Indice 5",
+    "description": "48.112149, 4.041070",
+    "type": "text",
+    "releaseDate": "2024-10-10T20:00:00"
+  },
+  {
+    "title": "Indice 6",
+    "description": "Chacunes des villes cachent un secret",
+    "type": "text",
+    "releaseDate": "2024-10-11T20:00:00"
+  },
+  {
+    "title": "Indice 7",
+    "description": "Une médiane est une droite qui passe par le milieu d'un segment et par le sommet opposé.",
+    "type": "text",
+    "releaseDate": "2024-10-12T20:00:00"
+  },
+  {
+    "title": "Indice 8",
+    "description": "L'isobarycentre est le point d'intersection des médianes d'un triangle.",
+    "type": "text",
+    "releaseDate": "2024-10-13T20:00:00"
+  },
+  {
+    "title": "Indice 9",
+    "description": "Czorsztyn, Pologne",
+    "type": "text",
+    "releaseDate": "2024-10-14T20:00:00"
+  },
+  {
+    "title": "Indice 10",
+    "description": "50.354235, 4.211265",
+    "type": "text",
+    "releaseDate": "2024-10-15T20:00:00"
+  },
+  {
+    "title": "Indice 11",
+    "description": "Bealach na Ba, Royaume-Uni",
+    "type": "text",
+    "releaseDate": "2024-10-16T20:00:00"
+  },
+  {
+    "title": "Indice 12",
+    "description": "Úvaly, République tchèque",
+    "type": "text",
+    "releaseDate": "2024-10-17T20:00:00"
+  },
+  {
+    "title": "Indice 13",
+    "description": "Chacunes des villes cachent un secret",
+    "type": "text",
+    "releaseDate": "2024-10-18T20:00:00"
+  },
+  {
+    "title": "Indice 14",
+    "description": "Des nombres, une suite, la solution est sous ton nez: 3 - 9 - 1 - 11 - 12",
+    "type": "text",
+    "releaseDate": "2024-10-19T20:00:00"
   }
 ]

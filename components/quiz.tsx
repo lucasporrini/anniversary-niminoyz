@@ -8,6 +8,7 @@ import {
 import { Input } from "@/components/ui/input";
 import questions from "@/lib/data/quiz.json";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -85,7 +86,8 @@ const Quiz = () => {
   if (completed) return null;
 
   return (
-    <div className="fixed top-0 left-0 h-screen w-screen z-50 bg-white flex flex-col items-center justify-center space-y-8">
+    <div className="fixed top-0 left-0 h-screen w-screen z-50 bg-white flex flex-col items-center justify-start space-y-8">
+      <Image src="/cat.png" width={300} height={200} alt="cat" />
       <p className="text-xl font-bold w-[calc(100%-2rem)] max-w-md">
         {questions[currentQuestion].question}
       </p>
