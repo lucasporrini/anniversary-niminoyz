@@ -6,7 +6,7 @@ import CountdownTimer from "../countdown";
 import ClueDescription from "../description";
 import { Card, CardContent, CardHeader, CardTitle } from "./card";
 
-const ClueCard = ({ title, description, type, releaseDate }: Clue) => {
+const ClueCard = ({ title, description, releaseDate }: Clue) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const ClueCard = ({ title, description, type, releaseDate }: Clue) => {
         timeLeft.hours === 0 &&
         timeLeft.minutes === 0 &&
         timeLeft.seconds === 0 ? (
-          <ClueDescription description={description} type={type} />
+          <ClueDescription description={description} />
         ) : (
           <CountdownTimer targetDate={releaseDate} />
         )}

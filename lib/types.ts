@@ -8,7 +8,6 @@ export type TimeLeft = {
 export type Clue = {
   title: string;
   description: string;
-  type: "url" | "text" | "image";
   releaseDate: string;
 };
 
